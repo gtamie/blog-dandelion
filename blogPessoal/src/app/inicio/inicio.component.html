@@ -45,7 +45,7 @@
               <small class="text-muted">Tema: {{item.tema.descricao}}</small>
               <p class="card-text mt-3">{{item.texto}}</p>
               <p class="card-text"><small class="text-muted">{{item.dataPublicacao | date: 'dd/MM/yyyy'}} às {{item.dataPublicacao | date: 'HH:mm'}} </small></p>
-              <p class="card-text"><small class="text-muted">por {{item.usuario?.nome}}</small></p>
+              <p class="card-text"><small class="text-muted">por {{item.usuario.nome}}</small></p>
             </div>
           </div>
         </div>
@@ -58,8 +58,8 @@
               <small class="text-muted">Tema: {{item.tema.descricao}}</small>
               <p class="card-text mt-3">{{item.texto}}</p>
               <p class="card-text"><small class="text-muted">{{item.dataPublicacao | date: 'dd/MM/yyyy'}} às {{item.dataPublicacao | date: 'HH:mm'}} </small></p>
-              <a [routerLink]="['postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
-              <a [routerLink]="['postagem-delete', item.id]"class="text-danger" href="">Apagar</a>
+              <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+              <a [routerLink]="['/postagem-delete', item.id]"class="text-danger" href="">Apagar</a>
             </div>
           </div>
         </div>
@@ -71,7 +71,7 @@
               <h5 class="card-title">{{item.titulo}}</h5>
               <p class="card-text mt-3">{{item.texto}}</p>
               <p class="card-text"><small class="text-muted">{{item.dataPublicacao | date: 'dd/MM/yyyy'}} às {{item.dataPublicacao | date: 'HH:mm'}} </small></p>
-              <p class="card-text"><small class="text-muted">por {{item.usuario?.nome}}</small></p>
+              <p class="card-text"><small class="text-muted">por {{item.usuario.nome}}</small></p>
             </div>
           </div>
         </div>
