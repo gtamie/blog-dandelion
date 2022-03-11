@@ -13,22 +13,22 @@ export class AuthService {
   constructor(private http: HttpClient) {   }
 
   entrar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin> {
-    return this.http.post<UsuarioLogin>('http://localhost:8080/usuarios/logar', usuarioLogin)
+    return this.http.post<UsuarioLogin>('https://blogdandelion.herokuapp.com/usuarios/logar', usuarioLogin)
 
   }
 
   cadastrar(usuario: Usuario): Observable<Usuario> {
-    return this.http.post<Usuario>('http://localhost:8080/usuarios/cadastrar', usuario)
+    return this.http.post<Usuario>('https://blogdandelion.herokuapp.com/usuarios/cadastrar', usuario)
 
   }
 
   atualizar(usuario: Usuario): Observable<Usuario> {
-    return this.http.put<Usuario>('http://localhost:8080/usuarios/atualizar', usuario)
+    return this.http.put<Usuario>('https://blogdandelion.herokuapp.com/usuarios/atualizar', usuario)
 
   }
 
   getByIdUsuario(id: number): Observable<Usuario>{
-    return this.http.get<Usuario>(`http://localhost:8080/usuarios/${id}`)
+    return this.http.get<Usuario>(`https://blogdandelion.herokuapp.com/usuarios/${id}`)
   }
 
   logado() {
